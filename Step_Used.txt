@@ -1,0 +1,48 @@
+/****************** Create a folder for local repo and follow the below steps in VS code terminal **************/
+1. PS C:\Users\vin\Practice_Git> git init  \\only once is enough to create .git file in the folder.
+2. PS C:\Users\vin\Practice_Git> git status   \\On branch main \\No commits yet
+3. PS C:\Users\vin\Practice_Git> git commit -m "Initial Commit"  
+   [main (root-commit) 95aa659] Initial Commit
+   1 file changed, 1 insertion(+)
+   create mode 100644 README.md
+4. PS C:\Users\vin\Practice_Git> git branch         
+* main   //if we are on wrong branch then change it to correct one using next step. 
+5. PS C:\Users\vin\Practice_Git> git branch -M main
+6. PS C:\Users\vin\Practice_Git> git remote -v
+origin  https://github.com/Vinay101202/Practice_Git.git (fetch)
+origin  https://github.com/Vinay101202/Practice_Git.git (push)
+//if it doesnot show the correct path then follow below step.
+7. PS C:\Users\vin\Practice_Git> git remote add origin https://github.com/Vinay101202/Practice_Git.git
+8. PS C:\Users\vin\Practice_Git> git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 14 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Vinay101202/Practice_Git.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+/*************Make changes to the file or add new file*********/
+9. PS C:\Users\vin\Vinay\WorkSupport\GIT\GIT_Practice\Practice_Git> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Test.txt
+nothing added to commit but untracked files present (use "git add" to track)
+10. PS C:\Users\vin\Practice_Git> git add .\Test.txt
+11. PS C:\Users\vin\Practice_Git> git commit -m "second file for testing"
+[main 62a5123] second file for testing
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Test.txt
+12. PS C:\Users\vin\Practice_Git> git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 14 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 330 bytes | 165.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Vinay101202/Practice_Git.git
+   95aa659..62a5123  main -> main
+branch 'main' set up to track 'origin/main'.
